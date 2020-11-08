@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+  "name": "YouTube searchable only",
+  "version": "0.1.0",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*"
+      ],
+      "js": [
+        "foreground.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "declarativeContent",
+    "tabs",
+    "history"
+  ],
+  "page_action": {
+    "default_icon": {
+      "16": "images/ytOptimise16.png",
+      "32": "images/ytOptimise32.png",
+      "48": "images/ytOptimise48.png",
+      "128": "images/ytOptimise128.png"
+    }
+  },
+    "icons": {
+    "16": "images/ytOptimise16.png",
+    "32": "images/ytOptimise32.png",
+    "48": "images/ytOptimise48.png",
+    "128": "images/ytOptimise128.png"
+  }
+}
